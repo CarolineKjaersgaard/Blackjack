@@ -4,13 +4,13 @@ namespace Blackjack
 {
     class Player
     {
-        public string name;
-        public int chipsInBank;
-        public int bet;
-        public Hand cardsOnHand;
-        public bool isTopPlayer;
+        public string name; // name of player
+        public int chipsInBank; // amount of chips player has in bank
+        public int bet; // amount player has betted on current game
+        public Hand cardsOnHand; // player's hand of cards
+        public bool isTopPlayer; // is true if player has more or equal points compared to others
 
-        public Player(string nameOfPlayer, int chips, Hand hand)
+        public Player(string nameOfPlayer, int chips, Hand hand) // creates a player with name and initial chips and hand
         {
             name = nameOfPlayer;
             chipsInBank = chips;
@@ -29,22 +29,22 @@ namespace Blackjack
             return name;
         }
 
-        public Hand GetHand()
+        public Hand GetHand() // returns current hand of player
         {
             return cardsOnHand;
         }
 
-        public bool IsTopPlayer()
+        public bool IsTopPlayer() // returns if player has most points
         {
             return isTopPlayer;
         }
 
-        public void SetHand(Hand hand)
+        public void SetHand(Hand hand) // repleces the current hand of player
         {
             cardsOnHand = hand;
         }
 
-        public void SetTopPlayer(bool isTop)
+        public void SetTopPlayer(bool isTop) // sets players position
         {
             isTopPlayer = isTop;
         }

@@ -5,8 +5,8 @@ namespace Blackjack
 {
     class Game
     {
-        public Deck deck; // deck of cards for game
-        public List<Player> players; // list of players' hands containg their cards
+        public Deck deck; // deck of cards in game
+        public List<Player> players; // list of players
         public Player dealer; // dealer's hand containg their cards
         public Game() // starts game of blackjack
         {
@@ -26,7 +26,7 @@ namespace Blackjack
             }
         }
 
-        public int NumberOfPlayers()
+        public int NumberOfPlayers() // returns input from user on number of players in game
         {
             int nOfPlayers = 0;
             while (nOfPlayers < 1 || nOfPlayers > 4)
@@ -48,7 +48,7 @@ namespace Blackjack
             return nOfPlayers;
         }
 
-        public int StartingBank()
+        public int StartingBank() // returns input from user on starting amount of chips each player has
         {
             int startingBank = 0;
             while (startingBank <= 0)
@@ -71,7 +71,7 @@ namespace Blackjack
             return startingBank;
         }
 
-        public void MakePlayers(int nOfPlayers, int startingBank)
+        public void MakePlayers(int nOfPlayers, int startingBank) // generates a number of players depending
         {
             for (int i = 1; i <= nOfPlayers; i++)
             {
@@ -96,7 +96,7 @@ namespace Blackjack
             }
         }
 
-        public void PlaceBets()
+        public void PlaceBets() // lets players place bets on ongoing game
         {
             foreach (Player player in players)
             {
@@ -104,11 +104,12 @@ namespace Blackjack
             }
         }
 
-        public Player MakeDealer()
+        public Player MakeDealer() // generates dealer for game
         {
             Card card1 = deck.DrawCard();
             Card card2 = deck.DrawCard();
             Hand hand = new Hand(card1, card2);
+            hand.PrintHand("the dealer");
             return new Player("the dealer", 0, hand); // creates dealer hand
         }
 
@@ -257,7 +258,7 @@ namespace Blackjack
             }
         }
 
-        public void RemoveLosers()
+        public void RemoveLosers() // removes players from list of players if their bank is empty
         {
             foreach (Player player in players)
             {
@@ -273,12 +274,12 @@ namespace Blackjack
             }
         }
 
-        public void ShuffleDeck()
+        public void ShuffleDeck() // sets new deck
         {
             deck = new Deck();
         }
 
-        public bool PlayAgain()
+        public bool PlayAgain() // returns true if user wants another round and there is still players in game
         {
             bool runGame = true;
             if (players.Count != 0)

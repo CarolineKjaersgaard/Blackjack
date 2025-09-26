@@ -5,8 +5,8 @@ namespace Blackjack
     class Hand // represents players' or dealer's cards on hand durring the game
     {
         public List<Card> cardsOnHand; // list of Card objects on hand
-        public int points;
-        public bool hasBust;
+        public int points; // tracks point value of hand
+        public bool hasBust; // is true if total points of hand > 21
 
         public Hand(Card card1, Card card2) // creates a initial hand with two random cards drawn from deck
         {
@@ -15,12 +15,12 @@ namespace Blackjack
             points = GetSummedValue();
         }
 
-        public int GetPoints()
+        public int GetPoints() // returns point value of hand
         {
             return points;
         }
 
-        public bool HasBust()
+        public bool HasBust() // returns true if total points of hand > 21
         {
             return hasBust;
         }
