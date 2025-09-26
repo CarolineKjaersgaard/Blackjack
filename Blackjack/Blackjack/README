@@ -2,6 +2,15 @@
 Game of Blackjack for 1-4 players according to classic rules
 
 Runs through main method of Program.cs file
-While in directory containg Program.cs file, enter dotnet run in terminal to run
+While in directory directly containg Program.cs file, enter dotnet run in terminal to run
+
+Is not implemented:
+- Removing betted amount from players bank
+- Showing dealer's hidden card on dealer's turn
+
+Could be nice to have in game:
+- Appropriate spacing between messages from game
+- More classes containg functionalities from Game.cs
+- Less calls to Hand objects through Player objects
 
 Author: Caroline Thorslund Kjaersgaard

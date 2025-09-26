@@ -44,7 +44,7 @@ namespace Blackjack
             cardsOnHand = hand;
         }
 
-        public void SetTopPlayer(bool isTop) // sets players position
+        public void SetTopPlayer(bool isTop) // sets players position 
         {
             isTopPlayer = isTop;
         }

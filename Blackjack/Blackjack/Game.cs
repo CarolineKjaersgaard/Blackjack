@@ -109,8 +109,8 @@ namespace Blackjack
             Card card1 = deck.DrawCard();
             Card card2 = deck.DrawCard();
             Hand hand = new Hand(card1, card2);
-            hand.PrintHand("the dealer");
-            return new Player("the dealer", 0, hand); // creates dealer hand
+            hand.PrintHand("The dealer");
+            return new Player("The dealer", 0, hand); // creates dealer hand
         }
 
         public bool PlayersTurn(Player player) // runs given player's turn and reports if bust
