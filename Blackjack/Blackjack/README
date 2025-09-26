@@ -1,0 +1,7 @@
+**Blackjack**
+Game of Blackjack for 1-4 players according to classic rules
+
+Runs through main method of Program.cs file
+While in directory containg Program.cs file, enter dotnet run in terminal to run
+
+Author: Caroline Thorslund Kjaersgaard
