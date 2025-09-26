@@ -264,12 +264,12 @@ namespace Blackjack
             {
                 if (player.GetChipsInBank() <= 0)
                 {
-                    Console.WriteLine(player + " has no more chips left in bank");
+                    Console.WriteLine(player.GetName() + " has no more chips left in bank");
                     players.Remove(player);
                 }
                 else
                 {
-                    Console.WriteLine(player + " has " + player.GetChipsInBank() + " chips left in bank");
+                    Console.WriteLine(player.GetName() + " has " + player.GetChipsInBank() + " chips left in bank");
                 }
             }
         }
